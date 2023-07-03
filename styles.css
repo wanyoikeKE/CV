@@ -88,39 +88,47 @@ h5 {
 }
 
 /* DISPLAY */
-body {
-  margin: 0px;
-  padding: 0px;
-}
 
-header,
-main {
-  margin: 20px;
-}
+@media screen and (max-width:799px){
+  
+  #info .left {
+    text-align: center;
+  }
 
-#info .left {
-  display: inline-block;
-  width: 49%;
-  vertical-align: top;
-}
+  #info .right {
+  text-align: center;
+  margin-top: 20px;
+  }
 
-#info .right {
-  display: inline-block;
-  width: 49%;
-  text-align: left;
-  margin-right: auto;
-  padding-right: 0%;
-}
+  section .right {
+    margin: 20px;
+  }
 
-section .left {
-  display: inline-block;
-  width: 24%;
-  vertical-align: top;
+  section h3 {
+    font-weight: bold;
+  }
 }
+@media screen and (min-width: 800px) {
+    #info {
+    display: grid;
+    grid-template-columns: 1fr 1 fr;
+  }
 
-section .right {
-  display: inline-block;
-  width: 74%;
+  #info .left {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+  }
+
+  #info .right {
+    align-self: end;
+    text-align: right;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+  }
 }
 
 #info h1 {
@@ -131,19 +139,37 @@ section .right {
   margin: 0;
 }
 
-#info .right {
-  vertical-align: bottom;
+.work-item {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }
 
-.work-title-left {
-  display: inline-block;
-  width: 74%;
+.work-item p {
+  grid-area: 2 / 1 / 3 / 3 ;
 }
 
-.work-title-right {
-  display: inline-block;
-  width: 24%;
+#info main {
+  max-width: 1000px;
+  padding: 0 20px;
 }
+
+#info {
+  margin: 30px auto;
+}
+
+main {
+  margin: 0 auto;
+}
+
+#info h1 {
+  margin 0px;
+}
+
+
+
+
+
+
 
 /**************************************************************************************
                                   PROJECTS
